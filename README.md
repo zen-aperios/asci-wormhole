@@ -23,7 +23,7 @@ ASCII wormhole pen package with source and minified build.
 ## Local Run
 
 ```bash
-cd /Users/robertaperios/codepen-backup/pen-152-asci-wormhole
+cd pen-152-asci-wormhole
 python3 -m http.server 5173
 ```
 
