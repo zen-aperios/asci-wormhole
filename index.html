@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ASCII - Wormhole Swirl (Control Panel + Export)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ascii-embed">
+      <pre class="ascii-pre" id="ascii" aria-hidden="true"></pre>
+    </div>
+
+    <button class="ui-toggle-btn" id="uiToggle" type="button"><span>✳︎</span></button>
+
+    <div class="ui-panel" id="uiPanel">
+      <h1>ASCII Wormhole <span class="ui-badge">Live Controls</span></h1>
+
+      <div class="ui-section-label">Global</div>
+      <div class="ui-row">
+        <span class="ui-name">Contrast</span>
+        <input id="contrastPower" type="range" min="0.5" max="3" step="0.05" />
+        <span class="ui-value" id="contrastPowerVal"></span>
+      </div>
+      <div class="ui-subrow">
+        <span>Opacity</span>
+        <input id="opacitySlider" type="range" min="0.05" max="0.6" step="0.01" />
+      </div>
+
+      <div class="ui-section-label">Color</div>
+      <div class="ui-row">
+        <span class="ui-name">Background</span>
+        <input id="bgColor" type="color" />
+      </div>
+      <div class="ui-row">
+        <span class="ui-name">ASCII</span>
+        <input id="fgColor" type="color" />
+      </div>
+
+      <div class="ui-section-label">Rotation &amp; Depth</div>
+      <div class="ui-row">
+        <span class="ui-name">Spin</span>
+        <input id="spinSpeed" type="range" min="-2" max="2" step="0.02" />
+        <span class="ui-value" id="spinSpeedVal"></span>
+      </div>
+      <div class="ui-row">
+        <span class="ui-name">Inward</span>
+        <input id="inwardSpeed" type="range" min="-3" max="3" step="0.03" />
+        <span class="ui-value" id="inwardSpeedVal"></span>
+      </div>
+
+      <div class="ui-section-label">Structure</div>
+      <div class="ui-row">
+        <span class="ui-name">Radial</span>
+        <input id="radialFreq" type="range" min="5" max="40" step="0.5" />
+        <span class="ui-value" id="radialFreqVal"></span>
+      </div>
+      <div class="ui-row">
+        <span class="ui-name">Arms</span>
+        <input id="angularFreq" type="range" min="1" max="12" step="0.2" />
+        <span class="ui-value" id="angularFreqVal"></span>
+      </div>
+      <div class="ui-row">
+        <span class="ui-name">Core R</span>
+        <input id="coreRadius" type="range" min="0.01" max="0.2" step="0.005" />
+        <span class="ui-value" id="coreRadiusVal"></span>
+      </div>
+      <div class="ui-row">
+        <span class="ui-name">Falloff</span>
+        <input id="falloff" type="range" min="1" max="8" step="0.1" />
+        <span class="ui-value" id="falloffVal"></span>
+      </div>
+
+      <div class="ui-section-label">Warp</div>
+      <div class="ui-row">
+        <span class="ui-name">Strength</span>
+        <input id="warpStrength" type="range" min="0" max="0.5" step="0.01" />
+        <span class="ui-value" id="warpStrengthVal"></span>
+      </div>
+      <div class="ui-row">
+        <span class="ui-name">Scale</span>
+        <input id="warpScale" type="range" min="0.5" max="6" step="0.1" />
+        <span class="ui-value" id="warpScaleVal"></span>
+      </div>
+      <div class="ui-row">
+        <span class="ui-name">Speed</span>
+        <input id="warpTimeScale" type="range" min="0" max="0.6" step="0.01" />
+        <span class="ui-value" id="warpTimeScaleVal"></span>
+      </div>
+
+      <div class="ui-toggle-line">
+        <label>
+          <input type="checkbox" id="pauseToggle" />
+          <span>Pause animation</span>
+        </label>
+        <span style="opacity:.55;">FPS locked to 30</span>
+      </div>
+
+      <div class="ui-section-label">Export</div>
+      <div class="ui-subrow">
+        <button id="exportBtn" type="button">Export snippet</button>
+        <span style="opacity:.55;">Webflow embed ready</span>
+      </div>
+      <textarea id="exportField" spellcheck="false" placeholder="Click &quot;Export snippet&quot; to generate code..."></textarea>
+
+      <div class="ui-footer">
+        <span>Drag sliders, then export.</span>
+        <span>✴︎</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
