@@ -24,7 +24,7 @@ ASCII wormhole pen package with source and minified build.
 
 ```bash
 cd pen-152-asci-wormhole
-python3 -m http.server 5173
+python3 -m http.server 8888
 ```
 
-Open: `http://localhost:5173`
+Open: `http://localhost:8888`
